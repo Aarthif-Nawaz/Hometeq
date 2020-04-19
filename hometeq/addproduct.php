@@ -1,0 +1,51 @@
+<?php
+session_start();
+include("detectlogin.php");
+include ("connection.php"); //include db.php file to connect to DB
+$pagename="Add Product"; //create and populate variable called $pagename
+echo "<link rel=stylesheet type=text/css href=style/mystylesheet.css>";
+echo "<title>".$pagename."</title>";
+echo "<body>";
+include ("headfile.html");
+echo "<h4>".$pagename."</h4>";
+echo "<form action='addproduct_conf.php' method='post'>";
+echo "<table>";
+echo "<tr>";
+echo "<td> <label> Product Name </label></td>";
+echo "<td> <input type='text' name='prodName' placeholder='Please Enter Product Name '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Small Picture Name  </label></td>";
+echo "<td> <input type='text' name='prodSmall' placeholder='Please Enter Small Picture '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Large Picture Name  </label></td>";
+echo "<td> <input type='text' name='prodLarge' placeholder='Please Enter Large Picture '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Short Description  </label></td>";
+echo "<td> <input type='text' name='shortDes' placeholder='Please Enter Product Short Description '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Long Description  </label></td>";
+echo "<td> <input type='text' name='longDes' placeholder='Please Enter Product Long Description '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Price  </label></td>";
+echo "<td> <input type='number' name='price' placeholder='Please Enter Price'></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <label> Initial Quantity </label></td>";
+echo "<td> <input type='number' name='quantity' placeholder='Please Enter Quantity '></td>";
+echo "</tr>";
+echo "<tr>";
+echo "<td> <input type='submit' value='Add Product'></td>";
+echo "<td> <input type='reset'  value='Clear Form'></td>";
+echo "</tr>";
+echo "</table>";
+echo "</form>";
+echo "<br>";
+echo "<br>";
+include ("footfile.html");
+echo "</body>";
+?>
